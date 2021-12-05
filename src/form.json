@@ -1,0 +1,56 @@
+[
+  {
+    "type": "start",
+    "title": "Fill this form to get a free quote from our experts. You will hear from us<br>soon.<br>🤝",
+    "description": "",
+    "id": "start",
+    "link": "project_name",
+    "i": 0,
+    "ans": ""
+  },
+  {
+    "type": "text",
+    "title": "Please tell us your Project Name (or) Website Link? *",
+    "description": "",
+    "id": "project_name",
+    "link": "source_code",
+    "i": 1,
+    "ans": ""
+  },
+  {
+    "type": "text",
+    "title": "Please provide us with the link to your smart contracts source code? *",
+    "description": "It will help us get more acquainted with your project. You can share a link to any of the following: GitHub/Etherscan/Bscscan",
+    "id": "source_code",
+    "link": "contact",
+    "i": 2,
+    "ans": ""
+  },
+  {
+    "type": "text",
+    "title": "Please provide contact details ( Telegram / Email / Skype / Discord) ? 📩 *",
+    "description": "",
+    "id": "contact",
+    "link": "additionnal_infos",
+    "i": 3,
+    "ans": ""
+  },
+  {
+    "type": "text",
+    "title": "Additional Information (optionnal)",
+    "description": "",
+    "id": "additionnal_infos",
+    "link": "end",
+    "i": 4,
+    "ans": ""
+  },
+  {
+    "type": "end",
+    "title": "Thanks for contacting us! We will be in touch with you shortly.<br>Your privacy is our priority. We protect your personal information.<br>🙌",
+    "description": "",
+    "id": "end",
+    "link": "",
+    "i": 5,
+    "ans": ""
+  }
+]

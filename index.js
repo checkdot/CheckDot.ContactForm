@@ -1,11 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import FullPage from './src/Home/FullPage';
+import React from "react";
+import ReactDOM from "react-dom";
+import FullPage from "./src/Home/FullPage";
 
 function Main() {
-  return (
-    <FullPage />
-  );
+  return <FullPage />;
 }
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById("root"));

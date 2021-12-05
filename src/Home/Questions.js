@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Input, Icon, Button } from 'antd';
-import { isMobile } from 'react-device-detect';
+import React, { useState, useEffect } from "react";
+import { Input, Icon, Button } from "antd";
+import { isMobile } from "react-device-detect";
 
-export default function Questions({
-  item,
-  index,
-  inputDataHandler
-}) {
-  const [value, setValue] = useState({
-  });
+export default function Questions({ item, index, inputDataHandler }) {
+  const [value, setValue] = useState({});
 
   useEffect(() => {
     // Update the document title using the browser API
-    console.log('render');
+    console.log("render");
   }, []);
 
   const clickHandler = (link, i) => {
@@ -37,21 +32,19 @@ export default function Questions({
     <div className="question-zone">
       <div className="title">
         <h2>
-            <span className="count" style={{ fontSize: '0.4em' }}>
-              {item.i}
-            </span>&nbsp;
-            <Icon type="arrow-right" style={{ fontSize: '0.3em' }} />&nbsp;
-            <span className="title">
-              {item.title}
-            </span>
-          </h2>
-        { item.description ?
-          <span className="description">
-              {item.description}
+          <span className="count" style={{ fontSize: "0.4em" }}>
+            {item.i}
           </span>
-          :
-          ''
-        }
+          &nbsp;
+          <Icon type="arrow-right" style={{ fontSize: "0.3em" }} />
+          &nbsp;
+          <span className="title">{item.title}</span>
+        </h2>
+        {item.description ? (
+          <span className="description">{item.description}</span>
+        ) : (
+          ""
+        )}
       </div>
       <Input
         placeholder="Type your answer here..."
@@ -59,9 +52,7 @@ export default function Questions({
         id={index}
         className="typeform-input"
         onPressEnter={() => clickHandler(item.link, item.i)}
-        onChange={
-          inputHandler
-        }
+        onChange={inputHandler}
       />
       <br />
       <div>
@@ -73,7 +64,10 @@ export default function Questions({
         >
           OK
         </Button>
-        <span hidden={isMobile} className="press-enter"> press <span className="bold">ENTER ↵</span></span>
+        <span hidden={isMobile} className="press-enter">
+          {" "}
+          press <span className="bold">ENTER ↵</span>
+        </span>
       </div>
     </div>
   );
