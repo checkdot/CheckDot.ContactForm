@@ -100,7 +100,7 @@ export default function FullPage() {
     console.log(obj);
     //API call here
 
-    const url = "http://localhost:80/api/index.php";
+    const url = "https://api.checkdot.io/requests/index.php";
     fetch(url, {
       method: "POST",
       body: JSON.stringify(obj),
@@ -179,6 +179,7 @@ export default function FullPage() {
       case "dec":
         if (locationIdx === 0) {
           window.location.href = window.location.href.split("#")[0];
+          return;
         }
         window.location.href = `#${qnLinks[locationIdx - 1]}`;
         break;
@@ -209,10 +210,9 @@ export default function FullPage() {
           bottom: "0%",
           display: "flex",
           width: "100%",
-          alignItems: "center",
         }}
       >
-        <p onClick={() => changeQn("inc")}>
+        <p onClick={() => changeQn("dec")}>
           <i
             style={{
               border: "1px solid white",
@@ -227,7 +227,7 @@ export default function FullPage() {
             class="arrow right"
           ></i>
         </p>
-        <p onClick={() => changeQn("dec")}>
+        <p onClick={() => changeQn("inc")}>
           <i
             style={{
               border: "1px solid white",
@@ -239,7 +239,7 @@ export default function FullPage() {
               marginLeft: "1rem",
               cursor: "pointer",
               position: "fixed",
-              bottom: "3.5%",
+              marginTop: "-4px"
             }}
             class="arrow right"
           ></i>
