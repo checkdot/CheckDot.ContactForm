@@ -209,7 +209,6 @@ export default function FullPage() {
           bottom: "0%",
           display: "flex",
           width: "100%",
-          justifyContent: "flex-end",
           alignItems: "center",
         }}
       >
@@ -223,6 +222,7 @@ export default function FullPage() {
               transform: "rotate(-135deg)",
               marginRight: "1rem",
               cursor: "pointer",
+              marginLeft: "1rem",
             }}
             class="arrow right"
           ></i>
@@ -235,9 +235,11 @@ export default function FullPage() {
               display: "inline-block",
               padding: "5px",
               transform: "rotate(45deg)",
-              textAlign: "lefts",
-              marginRight: "1rem",
+              textAlign: "left",
+              marginLeft: "1rem",
               cursor: "pointer",
+              position: "fixed",
+              bottom: "3.5%",
             }}
             class="arrow right"
           ></i>
